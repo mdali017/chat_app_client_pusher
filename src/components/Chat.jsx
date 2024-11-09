@@ -51,7 +51,8 @@ const Chat = () => {
     if (!newMessage.trim()) return;
 
     try {
-      await fetch("http://localhost:5000/api/messages", {
+      // await fetch("http://localhost:5000/api/messages", {
+      await fetch("https://chat-server-pusher.vercel.app/api/messages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
